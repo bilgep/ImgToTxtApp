@@ -39,8 +39,7 @@ namespace ImgToTxtApp
                     string[] recognizedWords = recognizedText.Split('\n');
 
                     // save text to txt file
-                    string txtFilePath = Path.Combine( Path.GetDirectoryName(imgPath) + @"\" +Path.GetFileNameWithoutExtension(imgPath) + ".txt");
-                    //File.WriteAllText(txtFilePath, recognizedText);
+                    string txtFilePath = Path.Combine($"{Path.GetDirectoryName(imgPath)}\\{Path.GetFileNameWithoutExtension(imgPath)}.txt");
                     File.WriteAllLines(txtFilePath, recognizedWords);
                     
 
